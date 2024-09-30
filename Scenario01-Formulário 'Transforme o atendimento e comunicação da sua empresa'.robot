@@ -17,21 +17,28 @@ ${click_button_by_prefix}        css=[id^='rd-button-']
 Abrir portal SmartSpace
     Open Browser                  ${BASE_URL}                       chrome
 Preencher campo nome
+    Sleep    3s
     Input Text                    ${input_name_by_id_prefix}        ''
 Preencher campo email
+    Sleep    3s
     ${email}    FakerLibrary.Email
     Input Text                    ${input_email_by_id_prefix}       ${email}
 Preencher campo phone
+    Sleep    3s
     Input Text                    ${input_phone_by_id_prefix}       99999999999
 Selecionar item estado
+    Sleep    3s
     Select From List By Value     ${select_estado_by_id_prefix}     PB
 Preencher campo empresa
+    Sleep    3s
     ${empresa}    FakerLibrary.Company
     Input Text                    ${input_empresa_by_id}            ${empresa}
 Preencher campo cargo
+    Sleep    3s
     ${cargo}    FakerLibrary.Job
     Input Text                    ${input_cargo_by_id}              ${cargo}
 Clicar botão enviar
+    Sleep    3s
     Click Button                  ${click_button_by_prefix}
 Visualizar mensagem de nome obrigatório
     ${mensagem}=                  Get Text       css=div.bricks-form__field:nth-child(1) > label:nth-child(3)

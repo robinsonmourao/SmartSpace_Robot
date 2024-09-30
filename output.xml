@@ -1,117 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-09-27T17:23:53.859159" rpa="false" schemaversion="5">
-<suite id="s1" name="Scenario01-Formulário 'Transforme o atendimento e comunicação da sua empresa'" source="c:\Users\Ryzen\Desktop\SmartSpace_Robot\Scenario01-Formulário 'Transforme o atendimento e comunicação da sua empresa'.robot">
-<test id="s1-t1" name="Case01: Validar obrigatoriedade do campo 'nome' do formulário 'Transforme o atendimento e comunicação da sua empresa'" line="41">
+<robot generator="Robot 7.1 (Python 3.12.3 on linux)" generated="2024-09-30T08:31:55.076258" rpa="false" schemaversion="5">
+<suite id="s1" name="Scenario01-Formulário 'Transforme o atendimento e comunicação da sua empresa'" source="/home/robinson/Desktop/codigos_smartspace/SmartSpace_Robot/Scenario01-Formulário 'Transforme o atendimento e comunicação da sua empresa'.robot">
+<test id="s1-t1" name="Case01: Validar obrigatoriedade do campo 'nome' do formulário 'Transforme o atendimento e comunicação da sua empresa'" line="48">
 <kw name="Given Abrir portal SmartSpace">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-09-27T17:23:54.724157" level="INFO">Opening browser 'chrome' to base url 'https://smartspace.com.br/'.</msg>
+<msg time="2024-09-30T08:31:55.895210" level="INFO">Opening browser 'chrome' to base url 'https://smartspace.com.br/'.</msg>
 <arg>${BASE_URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-09-27T17:23:54.723158" elapsed="5.385880"/>
+<status status="PASS" start="2024-09-30T08:31:55.894732" elapsed="8.673023"/>
 </kw>
-<status status="PASS" start="2024-09-27T17:23:54.722158" elapsed="5.386880"/>
+<status status="PASS" start="2024-09-30T08:31:55.893138" elapsed="8.675029"/>
 </kw>
 <kw name="When Preencher campo email">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-30T08:32:07.574497" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-30T08:32:04.573810" elapsed="3.001510"/>
+</kw>
 <kw name="Email" owner="FakerLibrary">
-<msg time="2024-09-27T17:24:00.111040" level="INFO">${email} = danielaazevedo@example.com</msg>
+<msg time="2024-09-30T08:32:07.576866" level="INFO">${email} = vmoreira@example.net</msg>
 <var>${email}</var>
-<status status="PASS" start="2024-09-27T17:24:00.110039" elapsed="0.001001"/>
+<status status="PASS" start="2024-09-30T08:32:07.575936" elapsed="0.001221"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-09-27T17:24:00.114041" level="INFO">Typing text 'danielaazevedo@example.com' into text field 'css=[id^='rd-email_field-']'.</msg>
+<msg time="2024-09-30T08:32:07.578745" level="INFO">Typing text 'vmoreira@example.net' into text field 'css=[id^='rd-email_field-']'.</msg>
 <arg>${input_email_by_id_prefix}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-27T17:24:00.112040" elapsed="0.157000"/>
+<status status="PASS" start="2024-09-30T08:32:07.577602" elapsed="0.214523"/>
 </kw>
-<status status="PASS" start="2024-09-27T17:24:00.110039" elapsed="0.159001"/>
+<status status="PASS" start="2024-09-30T08:32:04.572946" elapsed="3.219979"/>
 </kw>
 <kw name="And Preencher campo phone">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-30T08:32:10.796581" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-30T08:32:07.795922" elapsed="3.001015"/>
+</kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-09-27T17:24:00.272039" level="INFO">Typing text '99999999999' into text field 'css=[id^='rd-phone_field-']'.</msg>
+<msg time="2024-09-30T08:32:10.797735" level="INFO">Typing text '99999999999' into text field 'css=[id^='rd-phone_field-']'.</msg>
 <arg>${input_phone_by_id_prefix}</arg>
 <arg>99999999999</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-27T17:24:00.272039" elapsed="0.165018"/>
+<status status="PASS" start="2024-09-30T08:32:10.797276" elapsed="0.183731"/>
 </kw>
-<status status="PASS" start="2024-09-27T17:24:00.271043" elapsed="0.166014"/>
+<status status="PASS" start="2024-09-30T08:32:07.795147" elapsed="3.186181"/>
 </kw>
 <kw name="And Selecionar item estado">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-30T08:32:13.983900" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-30T08:32:10.983017" elapsed="3.001357"/>
+</kw>
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-09-27T17:24:00.439059" level="INFO">Selecting options from selection list 'css=[id^='rd-select_field-']' by value PB.</msg>
+<msg time="2024-09-30T08:32:13.985432" level="INFO">Selecting options from selection list 'css=[id^='rd-select_field-']' by value PB.</msg>
 <arg>${select_estado_by_id_prefix}</arg>
 <arg>PB</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-09-27T17:24:00.438057" elapsed="0.125004"/>
+<status status="PASS" start="2024-09-30T08:32:13.984764" elapsed="0.131491"/>
 </kw>
-<status status="PASS" start="2024-09-27T17:24:00.438057" elapsed="0.125004"/>
+<status status="PASS" start="2024-09-30T08:32:10.982418" elapsed="3.134177"/>
 </kw>
 <kw name="And Preencher campo empresa">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-30T08:32:17.120255" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-30T08:32:14.119495" elapsed="3.001277"/>
+</kw>
 <kw name="Company" owner="FakerLibrary">
-<msg time="2024-09-27T17:24:00.565061" level="INFO">${empresa} = Correia</msg>
+<msg time="2024-09-30T08:32:17.121732" level="INFO">${empresa} = Camargo</msg>
 <var>${empresa}</var>
 <doc>:example: 'Acme Ltd'</doc>
-<status status="PASS" start="2024-09-27T17:24:00.565061" elapsed="0.000000"/>
+<status status="PASS" start="2024-09-30T08:32:17.121284" elapsed="0.000710"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-09-27T17:24:00.566057" level="INFO">Typing text 'Correia' into text field 'id=rd-text_field-lza3jr5t'.</msg>
+<msg time="2024-09-30T08:32:17.123154" level="INFO">Typing text 'Camargo' into text field 'id=rd-text_field-lza3jr5t'.</msg>
 <arg>${input_empresa_by_id}</arg>
 <arg>${empresa}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-27T17:24:00.566057" elapsed="0.095005"/>
+<status status="PASS" start="2024-09-30T08:32:17.122454" elapsed="0.129424"/>
 </kw>
-<status status="PASS" start="2024-09-27T17:24:00.564058" elapsed="0.097004"/>
+<status status="PASS" start="2024-09-30T08:32:14.117869" elapsed="3.134304"/>
 </kw>
 <kw name="And Preencher campo cargo">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-30T08:32:20.258024" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-30T08:32:17.253070" elapsed="3.005364"/>
+</kw>
 <kw name="Job" owner="FakerLibrary">
-<msg time="2024-09-27T17:24:00.663058" level="INFO">${cargo} = Nutricionista</msg>
+<msg time="2024-09-30T08:32:20.259126" level="INFO">${cargo} = Flautista</msg>
 <var>${cargo}</var>
-<status status="PASS" start="2024-09-27T17:24:00.662056" elapsed="0.001002"/>
+<status status="PASS" start="2024-09-30T08:32:20.258728" elapsed="0.000569"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-09-27T17:24:00.664063" level="INFO">Typing text 'Nutricionista' into text field 'id=rd-text_field-lza3jr5u'.</msg>
+<msg time="2024-09-30T08:32:20.260271" level="INFO">Typing text 'Flautista' into text field 'id=rd-text_field-lza3jr5u'.</msg>
 <arg>${input_cargo_by_id}</arg>
 <arg>${cargo}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-27T17:24:00.663058" elapsed="0.107002"/>
+<status status="PASS" start="2024-09-30T08:32:20.259570" elapsed="0.145809"/>
 </kw>
-<status status="PASS" start="2024-09-27T17:24:00.662056" elapsed="0.108004"/>
+<status status="PASS" start="2024-09-30T08:32:17.252601" elapsed="3.153138"/>
 </kw>
 <kw name="And Clicar botão enviar">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-30T08:32:23.408604" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-30T08:32:20.407943" elapsed="3.001026"/>
+</kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-09-27T17:24:00.771056" level="INFO">Clicking button 'css=[id^='rd-button-']'.</msg>
+<msg time="2024-09-30T08:32:23.409749" level="INFO">Clicking button 'css=[id^='rd-button-']'.</msg>
 <arg>${click_button_by_prefix}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-27T17:24:00.771056" elapsed="0.135003"/>
+<status status="PASS" start="2024-09-30T08:32:23.409292" elapsed="0.145855"/>
 </kw>
-<status status="PASS" start="2024-09-27T17:24:00.771056" elapsed="0.135003"/>
+<status status="PASS" start="2024-09-30T08:32:20.406984" elapsed="3.148475"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>css=div.bricks-form__field:nth-child(1) &gt; label:nth-child(3)</arg>
 <arg>timeout=1s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-09-27T17:24:00.907056" elapsed="0.267492"/>
+<status status="PASS" start="2024-09-30T08:32:23.556102" elapsed="0.248725"/>
 </kw>
 <kw name="Then Visualizar mensagem de nome obrigatório">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-09-27T17:24:01.202546" level="INFO">${mensagem} = Campo obrigatório</msg>
+<msg time="2024-09-30T08:32:23.844013" level="INFO">${mensagem} = Campo obrigatório</msg>
 <var>${mensagem}</var>
 <arg>css=div.bricks-form__field:nth-child(1) &gt; label:nth-child(3)</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-27T17:24:01.175547" elapsed="0.028001"/>
+<status status="PASS" start="2024-09-30T08:32:23.805987" elapsed="0.038311"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${mensagem}</arg>
 <arg>Campo obrigatório</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-09-27T17:24:01.203548" elapsed="0.000000"/>
+<status status="PASS" start="2024-09-30T08:32:23.844643" elapsed="0.001054"/>
 </kw>
-<status status="PASS" start="2024-09-27T17:24:01.175547" elapsed="0.028001"/>
+<status status="PASS" start="2024-09-30T08:32:23.805407" elapsed="0.040789"/>
 </kw>
-<status status="PASS" start="2024-09-27T17:23:54.721156" elapsed="6.483390"/>
+<status status="PASS" start="2024-09-30T08:31:55.891965" elapsed="27.955352"/>
 </test>
-<status status="PASS" start="2024-09-27T17:23:53.865160" elapsed="7.341389"/>
+<status status="PASS" start="2024-09-30T08:31:55.097481" elapsed="28.754556"/>
 </suite>
 <statistics>
 <total>
