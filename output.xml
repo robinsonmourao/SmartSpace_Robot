@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-09-27T17:23:53.859159" rpa="false" schemaversion="5">
+<suite id="s1" name="Scenario01-Formulário 'Transforme o atendimento e comunicação da sua empresa'" source="c:\Users\Ryzen\Desktop\SmartSpace_Robot\Scenario01-Formulário 'Transforme o atendimento e comunicação da sua empresa'.robot">
+<test id="s1-t1" name="Case01: Validar obrigatoriedade do campo 'nome' do formulário 'Transforme o atendimento e comunicação da sua empresa'" line="41">
+<kw name="Given Abrir portal SmartSpace">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-27T17:23:54.724157" level="INFO">Opening browser 'chrome' to base url 'https://smartspace.com.br/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-27T17:23:54.723158" elapsed="5.385880"/>
+</kw>
+<status status="PASS" start="2024-09-27T17:23:54.722158" elapsed="5.386880"/>
+</kw>
+<kw name="When Preencher campo email">
+<kw name="Email" owner="FakerLibrary">
+<msg time="2024-09-27T17:24:00.111040" level="INFO">${email} = danielaazevedo@example.com</msg>
+<var>${email}</var>
+<status status="PASS" start="2024-09-27T17:24:00.110039" elapsed="0.001001"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-27T17:24:00.114041" level="INFO">Typing text 'danielaazevedo@example.com' into text field 'css=[id^='rd-email_field-']'.</msg>
+<arg>${input_email_by_id_prefix}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-27T17:24:00.112040" elapsed="0.157000"/>
+</kw>
+<status status="PASS" start="2024-09-27T17:24:00.110039" elapsed="0.159001"/>
+</kw>
+<kw name="And Preencher campo phone">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-27T17:24:00.272039" level="INFO">Typing text '99999999999' into text field 'css=[id^='rd-phone_field-']'.</msg>
+<arg>${input_phone_by_id_prefix}</arg>
+<arg>99999999999</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-27T17:24:00.272039" elapsed="0.165018"/>
+</kw>
+<status status="PASS" start="2024-09-27T17:24:00.271043" elapsed="0.166014"/>
+</kw>
+<kw name="And Selecionar item estado">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-09-27T17:24:00.439059" level="INFO">Selecting options from selection list 'css=[id^='rd-select_field-']' by value PB.</msg>
+<arg>${select_estado_by_id_prefix}</arg>
+<arg>PB</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-09-27T17:24:00.438057" elapsed="0.125004"/>
+</kw>
+<status status="PASS" start="2024-09-27T17:24:00.438057" elapsed="0.125004"/>
+</kw>
+<kw name="And Preencher campo empresa">
+<kw name="Company" owner="FakerLibrary">
+<msg time="2024-09-27T17:24:00.565061" level="INFO">${empresa} = Correia</msg>
+<var>${empresa}</var>
+<doc>:example: 'Acme Ltd'</doc>
+<status status="PASS" start="2024-09-27T17:24:00.565061" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-27T17:24:00.566057" level="INFO">Typing text 'Correia' into text field 'id=rd-text_field-lza3jr5t'.</msg>
+<arg>${input_empresa_by_id}</arg>
+<arg>${empresa}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-27T17:24:00.566057" elapsed="0.095005"/>
+</kw>
+<status status="PASS" start="2024-09-27T17:24:00.564058" elapsed="0.097004"/>
+</kw>
+<kw name="And Preencher campo cargo">
+<kw name="Job" owner="FakerLibrary">
+<msg time="2024-09-27T17:24:00.663058" level="INFO">${cargo} = Nutricionista</msg>
+<var>${cargo}</var>
+<status status="PASS" start="2024-09-27T17:24:00.662056" elapsed="0.001002"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-27T17:24:00.664063" level="INFO">Typing text 'Nutricionista' into text field 'id=rd-text_field-lza3jr5u'.</msg>
+<arg>${input_cargo_by_id}</arg>
+<arg>${cargo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-27T17:24:00.663058" elapsed="0.107002"/>
+</kw>
+<status status="PASS" start="2024-09-27T17:24:00.662056" elapsed="0.108004"/>
+</kw>
+<kw name="And Clicar botão enviar">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-27T17:24:00.771056" level="INFO">Clicking button 'css=[id^='rd-button-']'.</msg>
+<arg>${click_button_by_prefix}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-27T17:24:00.771056" elapsed="0.135003"/>
+</kw>
+<status status="PASS" start="2024-09-27T17:24:00.771056" elapsed="0.135003"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=div.bricks-form__field:nth-child(1) &gt; label:nth-child(3)</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-27T17:24:00.907056" elapsed="0.267492"/>
+</kw>
+<kw name="Then Visualizar mensagem de nome obrigatório">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-27T17:24:01.202546" level="INFO">${mensagem} = Campo obrigatório</msg>
+<var>${mensagem}</var>
+<arg>css=div.bricks-form__field:nth-child(1) &gt; label:nth-child(3)</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-27T17:24:01.175547" elapsed="0.028001"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${mensagem}</arg>
+<arg>Campo obrigatório</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-09-27T17:24:01.203548" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-09-27T17:24:01.175547" elapsed="0.028001"/>
+</kw>
+<status status="PASS" start="2024-09-27T17:23:54.721156" elapsed="6.483390"/>
+</test>
+<status status="PASS" start="2024-09-27T17:23:53.865160" elapsed="7.341389"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Scenario01-Formulário 'Transforme o atendimento e comunicação da sua empresa'">Scenario01-Formulário 'Transforme o atendimento e comunicação da sua empresa'</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
